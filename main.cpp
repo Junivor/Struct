@@ -5,18 +5,19 @@ struct diem {
     int x, y;
 };
 
-void nhapdiem(diem &newPoint) {
+void nhapdiem(diem &newPoint) { // khởi tạo điểm mới như là a hoặc b
     cout << "Nhap diem x: " << endl;
     cin >> newPoint.x;
     cout << "Nhap diem y: " << endl;
     cin >> newPoint.y;
 }
 
-void xuatdiem(diem currentPoint) {
+void xuatdiem(diem currentPoint) { // currentPoint ở đây là điểm hiện tại như là điểm a hay b vừa nhập bên trên
     cout << "(" << currentPoint.x << ", " << currentPoint.y << ")" << endl;
 }
 
 float khoangcach(diem currentPtA, diem currentPtB) {
+    // còn đây là 2 điểm bất kỳ để tính khoảng cách như a và c hay b và c, chứ không phải là điểm a hiện tại vừa được tạo ra
     return sqrt((currentPtA.x - currentPtB.x)*(currentPtA.x - currentPtB.x)
                 + (currentPtA.y - currentPtB.y)*(currentPtA.y - currentPtB.y));
 }
